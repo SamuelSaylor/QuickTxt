@@ -23,11 +23,12 @@ def append(txt, input): # Append mode
 # LISTS
 
 def createList(txt,seperator): # Split command
-    with open(txt, "r"):
+    with open(txt, "r") as file:
         return txt.split(seperator)     
 
 def split(txt,seperator):
     return createList(txt,seperator)
 
 def writeLines(txt,lines): # Writelines
-    pass
+    with open(txt, "r") as file:
+        file.writelines(lines)
